@@ -7,19 +7,19 @@ angular.module('spyglass', [])
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   })
-  .factory('spyglass', function($rootScope, $location, $window) {
-    return {
-      initialize: function(trackingId, domain, options) {
-        $window.ga('create', trackingId, domain, options);
-      },
+  .factory('spyglass', ['$rootScope', '$location', '$window', function($rootScope, $location, $window) {
+      return {
+        initialize: function(trackingId, domain, options) {
+          $window.ga('create', trackingId, domain, options);
+        },
 
-      sendPageviewsOnRouteChanges: function() {
-        var sendPageview = function() {
-          var path = $location.url();
-          $window.ga('send', 'pageview', path);
-        };
+        sendPageviewsOnRouteChanges: function() {
+          var sendPageview = function() {
+            var path = $location.url();
+            $window.ga('send', 'pageview', path);
+          };
 
-        $rootScope.$on('$routeChangeSuccess', sendPageview);
-      }
-    };
-  });
+          $rootScope.$on('$routeChangeSuccess', sendPageview);
+        }
+      };
+    }]);
