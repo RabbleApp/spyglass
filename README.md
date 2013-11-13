@@ -1,5 +1,5 @@
 # Spyglass
-Easily add Google Analytics tracking to your AngularJS application. Currently just supports automatic pageview tracking on route changes.
+Easily add Google Analytics tracking to your AngularJS application. (Currently just supports automatic pageview tracking on route changes.)
 
 ## Install
 
@@ -9,7 +9,7 @@ Spyglass is easily installed using bower:
 bower install spyglass --save
 ```
 
-Then be sure to reference spyglass.js in your index.html file.
+Then be sure to reference spyglass.js in your html file.
 
 ```html
 <script src="/bower_components/spyglass/spyglass.js"></script>
@@ -31,7 +31,7 @@ angular.module('yourAwesomeApp', ['spyglass'])
 
 ### Step by step
 
-First, make sure your application module specifies spyglass as a dependency:
+First, make sure your application module specifies the spyglass module as a dependency:
 
 ```js
 angular.module('yourAwesomeApp', ['spyglass'])
@@ -46,7 +46,7 @@ angular.module('yourAwesomeApp', ['spyglass'])
   });
 ```
 
-The `spyglass.initialize()` function also takes two optional domain and options parameters that specified like this:
+The `spyglass.initialize()` function can also take two optional domain and options parameters that are specified like so:
 
 ```js
 spyglass.initialize('UA-XXXXXXXX-X', 'yourdomain.com', {
@@ -54,9 +54,9 @@ spyglass.initialize('UA-XXXXXXXX-X', 'yourdomain.com', {
 });
 ```
 
-These parameters are passed straight to the Google Analytics `ga('create')` call so for more information please see [the relevant Google documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced#customizeTracker).
+These parameters are passed straight through to the Google Analytics `ga('create')` call so for more information please see [the relevant Google documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced#customizeTracker).
 
-To enable the automatic pageview tracking on route changes then add a subsequent call to `spyglass.sendPageviewsOnRouteChanges()`:
+To enable the automatic pageview tracking when the route changes, add a subsequent call to `spyglass.sendPageviewsOnRouteChanges()`:
 
 ```js
 angular.module('yourAwesomeApp', ['spyglass'])
