@@ -1,0 +1,22 @@
+{
+  "name": "spyglass",
+  "main": "spyglass.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/RabbleApp/spyglass",
+  "authors": [
+    "Calle Erlandsson <calle@rabble.se>"
+  ],
+  "description": "Google Analytics (analytics.js) for AngularJS",
+  "keywords": [
+    "google",
+    "analytics"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
