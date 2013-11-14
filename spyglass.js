@@ -13,13 +13,16 @@ angular.module('spyglass', [])
           $window.ga('create', trackingId, domain, options);
         },
 
-        sendPageviewsOnRouteChanges: function() {
-          var sendPageview = function() {
-            var path = $location.url();
-            $window.ga('send', 'pageview', path);
-          };
+        trackPageview: function(path) {
+          $window.ga('send', 'pageview', path);
+        },
 
-          $rootScope.$on('$routeChangeSuccess', sendPageview);
-        }
+        trackPageviewsOnRouteChanges: function() {
+          var self = this;
+          $rootScope.$on('$routeChangeSuccess', function() {
+            var path = $location.url();
+            self.trackPageview(path);
+          });
+        },
       };
     }]);
