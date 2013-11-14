@@ -16,7 +16,8 @@
     "karma-phantomjs-launcher": "~0.1.0",
     "karma-requirejs": "~0.1.0",
     "karma-script-launcher": "~0.1.0",
-    "phantomjs": "~1.9.2-2"
+    "phantomjs": "~1.9.2-2",
+    "karma-junit-reporter": "~0.1.0"
   },
   "repository": {
     "type": "git",
