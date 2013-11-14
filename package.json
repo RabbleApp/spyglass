@@ -1,0 +1,34 @@
+{
+  "name": "spyglass",
+  "version": "1.0.0",
+  "description": "Google Analytics (analytics.js) for AngularJS",
+  "main": "spyglass.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "karma": "~0.10.4",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-requirejs": "~0.1.0",
+    "karma-script-launcher": "~0.1.0",
+    "phantomjs": "~1.9.2-2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RabbleApp/spyglass.git"
+  },
+  "keywords": [
+    "google",
+    "analytics"
+  ],
+  "author": "Calle Erlandsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RabbleApp/spyglass/issues"
+  }
+}
