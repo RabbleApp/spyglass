@@ -1,6 +1,6 @@
 {
   "name": "spyglass",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Google Analytics (analytics.js) for AngularJS",
   "main": "spyglass.js",
   "directories": {
