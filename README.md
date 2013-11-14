@@ -56,13 +56,13 @@ spyglass.initialize('UA-XXXXXXXX-X', 'yourdomain.com', {
 
 These parameters are passed straight through to the Google Analytics `ga('create')` call so for more information please see [the relevant Google documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced#customizeTracker).
 
-To enable the automatic pageview tracking when the route changes, add a subsequent call to `spyglass.sendPageviewsOnRouteChanges()`:
+To enable the automatic pageview tracking when the route changes, add a subsequent call to `spyglass.trackPageviewsOnRouteChanges()`:
 
 ```js
 angular.module('yourAwesomeApp', ['spyglass'])
   .run(function(spyglass) {
     spyglass.initialize('UA-XXXXXXXX-X');
-    spyglass.sendPageviewsOnRouteChanges()
+    spyglass.trackPageviewsOnRouteChanges()
   });
 ```
 
