@@ -35,6 +35,22 @@ describe('spyglass', function() {
     });
   });
 
+  describe('trackEvent', function() {
+    it('passes arguments to ga', function() {
+      var category = 'some category';
+      var action = 'some action';
+      var label = 'some label';
+      var value = 'some value';
+      spyglass.trackEvent(category, action, label, value);
+      expect(mock.ga).toHaveBeenCalledWith('send',
+        'event',
+        category,
+        action,
+        label,
+        value);
+    });
+  });
+
   describe('trackPageviewsOnRouteChanges', function() {
     it('calls trackPageview when route changes', function() {
       var path = '/just/testing?some=param&another=one';

@@ -13,6 +13,10 @@ angular.module('spyglass', [])
           $window.ga('create', trackingId, domain, options);
         },
 
+        trackEvent: function(category, action, label, value) {
+          $window.ga('send', 'event', category, action, label, value);
+        },
+
         trackPageview: function(path) {
           $window.ga('send', 'pageview', path);
         },
